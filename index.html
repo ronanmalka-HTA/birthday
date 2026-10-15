@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>שבוע המתנות 🎁</title>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff7f2;--card:#ffffff;--text:#3a2a2a;--muted:#8a6f6f;--accent:#d9577a;--accent2:#f4a259;--line:#f3dcd6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1517;--card:#2a1e21;--text:#f6e9e6;--muted:#c4a6a3;--accent:#ff7fa3;--accent2:#ffb66b;--line:#40302f}}
+:root[data-theme="dark"]{--bg:#1d1517;--card:#2a1e21;--text:#f6e9e6;--muted:#c4a6a3;--accent:#ff7fa3;--accent2:#ffb66b;--line:#40302f}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Heebo',Arial,sans-serif;line-height:1.7}
+.wrap{max-width:560px;margin:0 auto;padding:28px 18px 48px}
+.hero{text-align:center;padding:12px 4px 26px}
+.hero .emoji{font-size:48px}
+h1{margin:6px 0 14px;font-size:30px;font-weight:800;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:0 auto 10px;font-size:17px;max-width:440px}
+.hero .last{font-weight:700;color:var(--accent)}
+ol{list-style:none;margin:0;padding:0}
+li{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin-bottom:10px;font-size:17px;font-weight:500}
+li .n{flex:0 0 36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:15px;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+li.big{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;color:#fff;font-weight:800;font-size:19px;justify-content:center;text-align:center;padding:18px}
+li.big .n{background:rgba(255,255,255,.25)}
+.end{text-align:center;margin-top:24px;font-size:20px;font-weight:700;color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hero">
+<div class="emoji">🎁</div>
+<h1>ברוכה הבאה לשבוע המתנות</h1>
+<p>לפני שאת מגיעה לגיל 30, זה הזמן לעצור לרגע ולהיזכר כמה כבר הספקת.</p>
+<p>לפעמים אנחנו שוכחים את הדברים המשמעותיים שעשינו ואת החוויות שעברנו, והכול עובר כל כך מהר.</p>
+<p class="last">אז בכל פעם שתמעיטי בערכך, תציצי כאן ותזכרי כמה את אישה גדולה 💖</p>
+</div>
+<ol id="list"></ol>
+<div class="end">מזל טוב, אהובה שלי 🥳</div>
+</div>
+<script>
+var items=["צניחה חופשית","הטיול הגדול שאחרי הצבא","הדרכת ילדים במחנה קיץ בארצות הברית","הקמת ערוץ יוטיוב מהראשונים בארץ","קורס עיצוב גרפי","הקמת עסק בעשר אצבעות","טסת לחו״ל עם בעלך לעתיד","חתונה בשעה טובה עם הבעל הכי טוב בעולם","נכנסת להריון שכל כך רצית","סדנת בישול זוגית","פתחת תיק השקעות עצמאי","הפקת ימי צילום למותג שלך","עברנו לגור יחד","מפגשי מעריצות בעזריאלי","קורס מדריכות פילאטיס","למדת לבשל אוכל טעים לבעלך","גינת ירק בחצר","טיול בהר געש מתפרץ בגואטמלה","צילומי סושיאל לכלות","סדנת פילאטיס לבנות מלאיה","הקלטת פודקאסט","צפית ב-10,957 שקיעות","טיילת מסביב לעולם ממזרח למערב","שמרת שבת","צבעת את השיער לג׳ינג׳י!!","נסעת 4 פעמים להתפנק במיציס, וזה לא הסוף","הלכת להופעה של ברונו מארס","צילמת קמפיינים עם החברות הכי גדולות במשק","ציירנו יחד ציורים מטורפים בזמן הקורונה","הגעת לגיל 30 🥳"];
+var ol=document.getElementById('list');
+items.forEach(function(t,i){var li=document.createElement('li');if(i===29)li.className='big';
+var n=document.createElement('span');n.className='n';n.textContent=i+1;
+var s=document.createElement('span');s.textContent=t;li.appendChild(n);li.appendChild(s);ol.appendChild(li);});
+</script>
+</body>
+</html>
